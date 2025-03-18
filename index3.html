@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+  <style>
+    body {
+      font-family: "Courier New", monospace;
+      margin: 0;
+      padding: 0;
+      background-color: darkolivegreen;
+      color: lightcyan;
+    }
+    div.anime {
+  width: 100px;
+  height: 100px;
+  background-color: skyblue;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+}
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+    div.relative {
+        position: relative;
+        left: 30px;
+        border: 3px solid #73AD21;
+        display: flex;
+        justify-content: center;
+}
+    header {
+      background: darkolivegreen;
+      color: lightcyan;
+      padding: 10px 0;
+      text-align: center;
+    }
+    a:link {
+       color: whitesmoke; 
+       text-decoration: none; 
+   }
+   a:visited {
+       color: lightblue; 
+       text-decoration: none; 
+   }
+   
+    nav {
+      display: flex;
+      justify-content: center;
+      background: lightsteelblue;
+      padding: 10px;
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: black;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: 'Aboreto';
+      font-size: 20px;
+      transition: 0.2s all;
+    }
+    nav button:hover {
+      background: darkolivegreen;
+    }
+    nav button:active {
+      background: lightskyblue;
+      transform: scale (0.7);
+      transform: translateY(4px);
+      box-shadow: 3px 2px 22px 1px lightgreen;
+    }       
+   button {
+   background-color: green;
+   border: none;
+   color: white;
+   padding: 10px 24px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+ }
+ .love {
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid blueviolet;
+  box-shadow: 0 0 5px 5px blue;
+  margin: 1rem;
+  display: flex;
+  justify-content: center; 
+}
+  .content {
+      padding: 20px;
+      display: none;
+    }
+    .content.active {
+      display: block;
+      transform: scale(0.98);
+      box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+      
+    }
+    input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  background-color: rgb(14, 8, 103);
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: darkolivegreen;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-row: 1 / span 2;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+  color: gray;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  }
+  </style>
+</head>
+<body>
+   
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+  </header>
+  <nav>
+    <button onclick="showTab('home')">Home</button>
+    <button onclick="showTab('projects')">Projects</button>
+    <button onclick="showTab('certifications')">Certifications</button>
+    <button onclick="showTab('links')">Useful Links</button>
+    <button onclick="showTab('about')">About Me</button>
+    <button onclick="showTab('contact')">Contact Me</button>
+  </nav>
+
+  <div id="home" class="content active">
+    <h2>Home</h2>
+    <p>Welcome to my portfolio! Here you can find information about my projects, certifications, and more.</p>
+  I am a Results-oriented technical consultant with expertise in machine learning, full-stack development, cloud technologies (AWS), business analytics, and product development. Proven ability to design, develop, deploy, and manage the entire product development lifecycle of web and mobile applications for various clients. Leveraged experience in search engine evaluation and content writing to craft user-centric applications, communicate complex technical concepts effectively, and stay up-to-date in the field by contributing to LLMs development. Adept at project management and bringing innovative solutions that combine machine learning, cloud platforms, and business acumen.
+  This summary effectively showcases your well-rounded technical skillset, business understanding, and communication abilities. It also highlights your experience with cutting-edge AI through your work on LLMs.
+  </div>
+
+  <div id="projects" class="content">
+    <div class="row">
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>Native Offline Phone App with a Media Content Backend</strong>: - XML, JAVA, Android Studio (Institute of Optics and Photonics)</li>
+      <li><strong>Fitness App</strong>: - (Ubiquitous apps) Native app using java, adroid studio and XML</li>
+      <li><strong>Helicopter Interface Design </strong>: (Institute of Unmanned Aerial Systems)
+        -	C++, Qt</li>
+        <li><strong>Hotel Management System</strong>: C#, ASP.NET Core </li>
+        <li><strong>Clinical Management System</strong>: VB.NET</li>
+      <li><strong>LeetCode Solutions</strong>: A collection of solved problems with explanations.</li>
+    </ul>
+
+    <ul> Cloud Related 
+        
+        <li><strong>Image Filter Web App (Udacity)</strong>: -  -	Cloud deployment, node.js, AWS
+            -	typescript</li>
+        <li><strong>Monolithic to Microservices (Udacity)</strong>: - Docker Containers, node.js, typescript </li>
+        <li><strong>Kubernetes Web App (Udacity) </strong>:  -	Cloud deployment, node.js, AWS
+            -	typescript</li>
+      </ul>
+      <ul> Machine Learning / AI
+
+        <li><strong>Nepal Language Processing Toolkit (Omdena)</strong>: -  -	NLP, python, Django</li>
+          <li><strong>Web Scraping (Omdena)</strong>: Women representation on Media in Nepal</li>
+          <li><strong>Chat Bot (Omdena)</strong>: RASA, LLM, Vector Db</li>
+      </ul>
+  </div>
+  </div>
+  <div id="certifications" class="content">
+    <h2>Certifications</h2>
+    <ul>
+      <li>	AWS Certified Solutions Architect - Associate  …. AWS </li>
+      <li>	Natural Language Processing …………………… ….Omdena </li>
+      <li>  Google Africa Developer Training ………………….. .Google </li>
+      <li>	Andela React Learning Program …………………… Andela, Meta </li>
+      <li>	Financial Modeling and Valuation ………………… CFI </li>
+      <li>	AWS Machine Leaning Foundations ……………. Udacity </li>
+      <li>	Android Mobile App Development ……………….. Udacity </li>
+      <li>	Data Analysis Fundamentals ……………………….. Udacity </li>
+      <li>	Programming Foundations …………………………... Udacity </li>
+      <li>	Management and Leadership ……………………….. VCODE </li>
+      <li>	Security in the Field ……………………………………… UN </li>
+      <li>	Team Workforce …………………………………………… GIZ  </li>
+      <li>	Power BI Fundamentals ……………………………….. CFI </li>
+      <li>	Python Fundamentals ………………………………….  CFI </li>
+      <li>  SQL Fundamentals ………………………………………   CFI </li>
+      <li>  Responsive Web Design ………………………………. freeCodeCamp </li>
+      <li>  JavaScript Algorithms and Data Structures - freeCodeCamp</li>
+      <li>  AWS Certified Cloud Practitioner</li>
+    </ul>
+  </div>
+
+  <div id="links" class="content">
+    <h2>Useful Links</h2>
+   
+      <ul>
+      <li><a href="https://leetcode.com/u/KidyLove/" target="_blank">LeetCode Profile</a></li>
+      <li><a href="https://github.com/kedist/" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/kedist-t-tekle-6a774563?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a></li>
+      <li><a href="https://docs.google.com/document/d/1qvje01sRHJIIyU3Xo1VEHs-AvhxZKx7vIhFq97Cv6ZI/edit?usp=sharing" target="_blank">Gallery</a></li>
+      <li><a href="https://docs.google.com/document/d/1qtOMGCAzBjPwImMy5gc5OvdRietE_wZP/edit?usp=drive_link&ouid=105121772304806179452&rtpof=true&sd=true" target="_blank">Resume</a></li>
+    </ul> 
+   
+    <div class="anime">
+   
+    </div>
+  </div>
+  <div id="about" class="content">
+    <h2>About Me</h2>
+    <p>Hi! I'm a passionate developer with experience in Java, Kotlin, Python, React, and web development. I love solving problems and building cool projects. </p>
+    <img src="photo 1.JPG" class="love" alt="Kedist T.Tekle width="240" height="240"> 
+  </div>
+
+  <div id="contact" class="content">
+    <h2>Contact Me</h2>
+    <form>
+      <label for="name">Name:       </label>
+      <input type="text" id="name" name="name" placeholder="Your name.." required>
+      <br>
+      <label for="email">Email:     </label>ur E-mail..
+      <input type="email" id="email" name="email" placeholder="Your E-mail" required>
+      <br>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="3" placeholder="Write something.." required></textarea>
+      <br>
+      <button type="submit"> Send </button>
+    </form>
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 Kedist T. Tekle. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showTab(tabName) {
+      // Hide all tabs
+      document.querySelectorAll('.content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      // Show the selected tab
+      document.getElementById(tabName).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>  
